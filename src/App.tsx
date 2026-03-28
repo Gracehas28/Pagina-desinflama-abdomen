@@ -232,8 +232,7 @@ export default function App() {
             {[
               "Te sentís hinchada incluso después de comer algo liviano.",
               "Sentís que tu ropa te aprieta al final del día.",
-              "Tenés antojos constantes de dulces o harinas.",
-              "Buscás un cambio real y duradero en solo una semana."
+              "Buscás un cambio real y duradero"
             ].map((text, i) => (
               <Card key={i} className="flex items-start gap-4">
                 <XCircle className="text-red-500 shrink-0 mt-1" size={24} />
@@ -252,7 +251,6 @@ export default function App() {
             {[
               "Reducir visiblemente la inflamación abdominal.",
               "Bajar de peso de forma saludable y natural.",
-              "Aprender a elegir alimentos que te den energía real.",
               "Desintoxicar tu cuerpo de azúcares y procesados."
             ].map((text, i) => (
               <Card key={i} className="flex items-start gap-4 border-l-4 border-accent">
@@ -351,9 +349,12 @@ export default function App() {
             </h2>
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/3">
-                <div className="bg-primary p-4 rounded-2xl shadow-lg transform -rotate-6">
-                  <Star size={64} className="text-accent mx-auto" />
-                </div>
+                <img 
+                  src="https://i.imgur.com/YEg6jNT.png" 
+                  alt="Bono Exclusivo" 
+                  className="w-full max-w-[240px] mx-auto rounded-2xl shadow-2xl transform -rotate-6 hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <div className="md:w-2/3 text-left">
                 <h3 className="text-2xl md:text-4xl font-bold text-text-dark mb-4">Activa la Glándula '3'</h3>
