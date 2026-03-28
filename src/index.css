@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  
+  --color-primary: #1B5E5E;
+  --color-secondary: #4ECDC4;
+  --color-accent: #A8E6A3;
+  --color-bg-light: #F8F9FA;
+  --color-text-dark: #2C3E50;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-text-dark;
+    background: linear-gradient(180deg, #F8F9FA 0%, #E9ECEF 100%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #1B5E5E 0%, #2a8a8a 100%);
+}
+
+.gradient-cta {
+  background: linear-gradient(to bottom, #FFB347 0%, #FF8C00 100%);
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
