@@ -19,21 +19,38 @@ import {
   Check
 } from 'lucide-react';
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 // --- Components ---
 
-const Button = ({ children, className = "", primary = true }: { children: React.ReactNode, className?: string, primary?: boolean }) => (
-  <motion.button
-    whileHover={{ scale: 1.05, y: -2 }}
-    whileTap={{ scale: 0.95 }}
-    className={`px-8 py-4 rounded-full font-bold text-lg uppercase tracking-wider shadow-lg transition-all ${
-      primary 
-        ? "gradient-cta text-white hover:brightness-110" 
-        : "bg-white text-orange-600 border-2 border-orange-600"
-    } ${className}`}
-  >
-    {children}
-  </motion.button>
-);
+const Button = ({ children, className = "", primary = true, onClick }: { children: React.ReactNode, className?: string, primary?: boolean, onClick?: () => void }) => {
+  const handleClick = () => {
+    // Tracking Meta Pixel
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'InitiateCheckout');
+    }
+    if (onClick) onClick();
+  };
+
+  return (
+    <motion.button
+      whileHover={{ scale: 1.05, y: -2 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={handleClick}
+      className={`px-8 py-4 rounded-full font-bold text-lg uppercase tracking-wider shadow-lg transition-all ${
+        primary 
+          ? "gradient-cta text-white hover:brightness-110" 
+          : "bg-white text-orange-600 border-2 border-orange-600"
+      } ${className}`}
+    >
+      {children}
+    </motion.button>
+  );
+};
 
 const SectionTitle = ({ children, light = false, className = "" }: { children: React.ReactNode, light?: boolean, className?: string }) => (
   <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 ${light ? "text-white" : "text-text-dark"} ${className}`}>
