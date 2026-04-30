@@ -33,6 +33,10 @@ const Button = ({ children, className = "", primary = true, onClick }: { childre
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('track', 'InitiateCheckout');
     }
+    
+    // Redirect to Hotmart
+    window.location.href = "https://pay.hotmart.com/M105513456A";
+    
     if (onClick) onClick();
   };
 
