@@ -190,8 +190,8 @@ export default function App() {
                   className="rounded-3xl shadow-2xl border-4 border-white/20 object-cover aspect-[3/4]"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-red-500 text-white font-bold p-4 rounded-full shadow-xl transform -rotate-12">
-                  70% OFF
+                <div className="absolute -bottom-6 -right-6 bg-red-500 text-white font-bold p-4 rounded-full shadow-xl transform -rotate-12 text-sm text-center">
+                  80% de<br/>descuento
                 </div>
               </div>
               {/* Sombra/Brillo de fondo */}
@@ -314,7 +314,7 @@ export default function App() {
               <div className="bg-white/10 p-8 rounded-3xl backdrop-blur-sm border border-white/20">
                 <p className="text-white/60 line-through text-xl mb-2">Precio regular: $97 USD</p>
                 <div className="flex items-end gap-4 mb-6">
-                  <span className="text-6xl font-bold text-accent">$9,99</span>
+                  <span className="text-6xl font-bold text-accent">$5,99</span>
                   <span className="text-2xl font-semibold mb-2">USD</span>
                 </div>
                 <p className="text-accent font-bold text-lg mb-8 flex items-center gap-2">
@@ -457,7 +457,7 @@ export default function App() {
             <h3 className="text-2xl md:text-3xl font-bold mb-6">Llevate el programa completo + todos los bonos</h3>
             <div className="flex justify-center items-center gap-6 mb-8">
               <span className="text-white/40 line-through text-2xl">$97 USD</span>
-              <span className="text-6xl font-bold text-accent">$9,99 USD</span>
+              <span className="text-6xl font-bold text-accent">$5,99 USD</span>
             </div>
             <Button className="w-full md:w-auto px-16 py-6 text-2xl">
               Quiero mi libro ahora
